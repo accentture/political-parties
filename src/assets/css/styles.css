@@ -1,0 +1,77 @@
+*{
+    margin:0px;
+}
+body{
+    background-color: #babbbd;
+}
+.wrap{
+    width:85%;
+    margin:0 auto;
+}
+#header{
+    height: 80px;
+    line-height: 80px;
+    background-color: #01162a;
+    
+}
+#header div{
+    display:inline-block;
+    text-align: center;
+    margin-left:40px;
+}
+#header ul li a, .login a{
+    color:white;
+    text-decoration: none;
+}
+
+/* =========================== section =========================== */
+h1{
+    text-align: center;
+    background-color:black;
+    color:white;
+}
+#main-container{
+    padding-top:45px;
+}
+/* #front-container{
+    display:block;
+} */
+
+/* front */
+.front-container ul li{
+    /* display: block; */
+    width:396px;
+    height:90px;
+    line-height: 45px;
+    
+    margin:0 auto;
+    margin-bottom: 21px;
+    border-radius:5px;
+
+    background:#0c3044;
+    text-align:center;
+    list-style: none;
+    font-size:20px;
+    
+}
+.front-container ul li:hover {
+    
+    background:#124561;
+    
+}
+.front-container ul li:active {
+    
+    background:#124561;
+    
+}
+.front-container ul li a{
+    display:block;
+    padding:21px;
+    height: inherit;
+    color:white;
+    text-align: center;
+    text-decoration:none;
+
+}
+
+

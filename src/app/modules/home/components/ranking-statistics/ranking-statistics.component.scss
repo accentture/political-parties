@@ -1,0 +1,281 @@
+
+.box-ranking-candidates{
+    .navigationButtons{
+        width:100%;
+        height: 45px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+
+    
+        div{
+            flex-basis: 48%;
+            height: 45px;
+            display: inline-flex;
+            background-color:#353e58;
+            border-radius: 5px;
+            
+            a{ 
+                display: block;
+                width: 100%;
+                line-height: 45px;
+                text-align: center;
+                text-decoration: none;
+                font-size:20px;
+                font-weight:bold;
+                color:white;
+                cursor:pointer;
+            }
+            
+        }
+        div.itSelfButton{
+            background-color:#0e1823;
+        }
+    
+    }
+}
+
+.box-ranking-candidates{
+    .container-statistic-bar{
+        width:50%;
+        height: auto;
+        margin:0 auto;
+        margin-top:8px;
+        padding-top:5px;
+        
+        
+        
+        .bars{
+            display:grid;
+            grid-template-columns: repeat(3, );
+            height: 400px;
+            background-color: #161616;
+            position:relative;
+
+            .bar{
+                width: 25%;
+                height: 20px;
+                background-color:rgb(38, 49, 56);
+                position: absolute;
+                p{
+                    font-size:18px;
+                    font-weight: bold;
+                    color:#e8dede;
+                    text-align: center;
+                }
+            }
+        }
+    
+        /* bar for every position */
+        .bar1{
+            bottom:0;
+            left:8%;
+        }
+        .bar2{
+            bottom:0;
+            left:38%;
+        }
+        .bar3{
+            bottom:0;
+            left:68%;
+        }
+    
+        /* name of candidate */
+        .names-first-candidates{
+            margin-top:9px;
+            display: flex;
+
+            .name{
+                flex-basis:24.1%;
+                background-color: #cc1a1a;
+                color:white;
+
+                font-size:11px;
+                padding: 3px;
+                text-align: center;
+            }
+            .name1{
+                margin-left:7.7%;
+
+            }
+            .name2{
+                margin-left:5%;
+            }
+            .name3{
+                margin-left:4.7%;
+            }
+        }
+        
+        //descriptions of statistic bars
+        .description-of-table{
+            position: absolute;
+            width:50%;
+
+            .totalvotes{
+                position: absolute;
+                top: -1647%; 
+                left: -14.5%;
+                font-size: 20px;
+                font-weight: bold;
+                color:#051f0d;
+                font-weight:bold;
+            
+            }
+            .descriptionY{
+                transform: rotate(-90deg);
+                transform-origin: left top 0;
+                position:absolute;
+                top: -650%;
+                left: -8%;
+                font-size: 20px;
+                color:#051f0d;
+                font-weight:bold;
+            }
+            .descriptionX{
+
+                text-align: center;
+                font-size: 20px;
+                color:#051f0d;
+                font-weight:bold;
+            }
+        }
+        
+    }
+}
+
+/* responsive */
+@media(max-width:872px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -64.5%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:770px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -18.5%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:680px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -20.5%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:592px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -23.5%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:550px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            /* name of candidate */
+            .names-first-candidates{
+                .name{
+                    padding: 2px;
+
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:518px){
+    .box-ranking-candidates{
+        .container-statistic-bar{
+            .names-first-candidates{
+                .name{
+                    font-size:9px;
+
+                }
+
+            }        
+            .description-of-table{
+                .totalvotes{
+                    left: -27.5%;
+                }
+                .descriptionY{
+                    left: -11%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:486px){
+    .box-ranking-candidates{
+        .navigationButtons{
+            flex-flow:row wrap;
+            div{
+                flex-grow: 1;
+                flex-basis:95%;
+                margin-right:14px;
+                margin-left:14px;
+                margin-bottom:8px;
+            }
+        }
+        .container-statistic-bar{
+            margin-top:63px;
+        }
+    }
+    
+}
+@media(max-width:454px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -29.5%;
+                }
+            }
+
+        }
+    }
+}
+@media(max-width:390px){
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+
+                .totalvotes{
+                    left: -33.5%;
+                }
+                .descriptionY{
+                    left: -12%;
+                }
+            }
+
+        }
+    }
+}

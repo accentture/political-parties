@@ -1,0 +1,1 @@
+/* I can set routes of all images of project here, it allows to modify only this file and not the components */

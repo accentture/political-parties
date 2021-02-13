@@ -1,0 +1,55 @@
+h3{
+    text-align: center;
+}
+.container{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    .deparmentButton{
+        width: 30%;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:134%;
+        text-align: center;
+        height: 54px;
+        line-height: 54px;
+        background:#1f3744;
+        color:white;
+        border-radius:5px;
+        text-decoration: none;
+    
+    }
+    .deparmentButton:hover{
+        background-color: #3e6479;
+        
+    }
+    .deparmentButton:active{
+        background-color: #2d556b;
+        
+    }
+}
+
+/* responsive */
+@media(max-width:780px){
+    .container{
+        .deparmentButton{
+            width: 45%;
+
+        }
+
+    }
+}
+
+@media(max-width:440px){
+    .container{
+        .deparmentButton{
+            width: 88%;        
+        }
+    }
+}
+
+
+
+
+

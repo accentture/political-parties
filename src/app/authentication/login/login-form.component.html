@@ -1,0 +1,23 @@
+
+<h1>Bienvenido de nuevo</h1>
+<p>Gracias por volver a tu sitio favorito, por favor llena el formulario</p>
+<p>afasfsaasdf</p>
+<div class="login-form-input">
+    <label for="">Email : </label>
+    <input type="email" placeholder="email" [(ngModel)]="loginForm.email.val" #email="ngModel">
+    <!-- password="ngModel  :  it allows to use features of ngModel -->
+
+    <small *ngIf="!loginForm.email.isValid() && email.touched">{{loginForm.email.error}}</small>
+</div>
+
+<div class="login-form-input">
+    <label for="">Contraseña : </label>
+    <input type="password" placeholder="Password" [(ngModel)]="loginForm.password.val"  #password="ngModel" #password="ngModel">
+    <small *ngIf="!loginForm.password.isValid() && password.touched ">{{loginForm.password.error}}</small>
+</div>
+
+<small>Olvidé la contraseña</small>
+<div class="login-form-buttons">
+    <button class="login-form-buttons__signup">Registrarse</button>
+    <button class="login-form-buttons__signin signin" [disabled]="!isValidForm" (click)="authenticate()">Iniciar sesión</button>
+</div>

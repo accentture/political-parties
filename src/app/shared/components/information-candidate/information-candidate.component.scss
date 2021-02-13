@@ -1,0 +1,71 @@
+
+.candidate-container{
+    display: flex;
+    flex-flow: row wrap;
+
+    height:auto;
+    border: 2px solid #7786f1;
+    margin-top: 35px;
+    text-align: center;
+    background-color: #042f54;
+    color:#e2dddd;
+    
+    
+
+    .image{
+        flex-basis: 43%;
+        padding: 6px;
+        img{
+            width:100%;
+            height: 187px;
+        }
+    }
+    .information{
+        padding:4px;
+
+        flex-basis: 50%;
+        font-size:95%;
+
+        h3, h5, p{
+            text-align: center;
+        }
+        h3.candidate{
+            font-weight: bold;
+            color:white;
+        }
+    }
+    .button-vote{
+        flex-basis: 100%;
+    }
+    
+}
+@media(max-width:654px){
+    .candidate-container{    
+    
+        .image{
+            flex-basis:38%;
+            padding: 6px;
+            img{
+                width:100%;
+                height: 163px;
+            }
+        }
+        .information{
+            font-size:90%;
+    
+        }
+
+        
+    }
+}
+@media(max-width:575px){
+    .candidate-container{
+        justify-content: space-evenly;
+
+        .information{
+            font-size:92%;
+        }
+        
+    }
+}
+

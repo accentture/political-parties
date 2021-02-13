@@ -1,0 +1,143 @@
+<div class="mainContainer">
+    <h2>Registrate</h2>
+    <h3>Es bastante fácil</h3>
+    <hr>
+
+    <form #formContact="ngForm" (ngSubmit)="onSubmit(formContact)"  >
+
+        <!-- names and surnames -->
+        <div class="container boxNameAndSurname" #boxNameAndSurname >
+            <div class="boxNames" >
+                <label for="names"></label>
+                <input type="text" placeholder="Nombres" name="names" #names="ngModel" 
+                    [ngModelOptions]="{standalone:false}" 
+                    [(ngModel)]="user.names"      
+                    pattern="[a-zA-Z]+"
+                    [class.mandatory]="names.touched && !names.valid"
+                    required
+                    >
+                <svg fill="currentColor" width="16px" height="16px" 
+                    #warningAboutName
+                    viewBox="0 0 24 24" 
+                    [style.visibility]="names.touched && !names.valid ? 'visible': 'hidden' ">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                </svg>
+            </div>
+            <div class="boxSurnames">
+                <input type="text" placeholder="Apellidos" name="surnames" #surnames="ngModel" [(ngModel)]="user.surnames" 
+                    [ngModelOptions]="{standalone:false}" 
+                    pattern="[a-zA-Z]+" 
+                    [class.mandatory]="surnames.touched && !surnames.valid"
+                    required>
+                <svg fill="currentColor" width="16px" height="16px" 
+                    viewBox="0 0 24 24" 
+                    [style.visibility]="surnames.touched && !surnames.valid ? 'visible': 'hidden' ">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                </svg>
+            </div>
+            
+            
+        </div>
+
+        <div class="container boxEmailNumber" >
+            <input type="text" placeholder="Número de celular o email" name="emailOrMobileNumber"      
+                #emailOrMobileNumber="ngModel" 
+                [(ngModel)]="user.emailOrMobileNumber" 
+                [ngModelOptions]="{standalone:false}" 
+                required 
+                [class.mandatory]="emailOrMobileNumber.touched && !emailOrMobileNumber.valid">
+            <svg fill="currentColor"  width="16px" height="16px" 
+                viewBox="0 0 24 24" 
+                [style.visibility]="emailOrMobileNumber.touched && !emailOrMobileNumber.valid ? 'visible': 'hidden' ">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+            </svg>
+        </div>
+        <div class="container boxPassword">
+            <input type="password" placeholder="Contraseña" name="password" #password="ngModel" [(ngModel)]="user.password" 
+                [ngModelOptions]="{standalone:false}" 
+                required 
+                [class.mandatory]="password.touched && !password.valid">
+            <svg fill="currentColor" width="16px" height="16px" 
+                viewBox="0 0 24 24" 
+                [style.visibility]="password.touched && !password.valid ? 'visible': 'hidden' ">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+            </svg>
+        </div>  
+
+        <!-- date of birth -->
+        <div class="container boxBirthdate">
+            <div>
+                <label for="">Cumpleaños</label>
+                <svg fill="currentColor"  width="16px" height="16px" 
+                viewBox="0 0 24 24" 
+                *ngIf="(day.touched && !day.valid) || (month.touched && !month.valid) || (year.touched && !year.valid)">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                </svg>
+            </div>
+            <select name="day" #day="ngModel" [(ngModel)]=birthday [ngModelOptions]="{standalone:false}" required>
+                <option value="0">Dia</option>
+                <option *ngFor="let day of dayCollection" value="{{day + 1}}">{{day + 1}}</option>
+            </select>
+    
+            <select name="month" #month="ngModel" [(ngModel)]="monthOfBirthday" [ngModelOptions]="{standalone:false}" required>
+                <option value="0">Mes</option>
+                <option value="1">Enero</option>
+                <option value="1">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+            </select>
+    
+            <select name="year" #year="ngModel" [(ngModel)]="yearOfBirthday" [ngModelOptions]="{standalone:false}" required>
+                <option value="0">Año</option>
+                <option *ngFor="let year of yearCollection" value="{{year}}">{{year}}</option>
+            </select>
+        </div>
+
+        <!-- gender -->
+        <div class="container boxGender">
+            <div>
+                <label for="">Género</label>
+            </div>
+            <div class="optionGender">
+                <label>Mujer</label>
+                <input type="radio" name="gender" value="woman" [(ngModel)]="user.gender" required>
+            </div>
+            <div class="optionGender">
+                <label>Hombre</label>
+                <input type="radio" name="gender" value="man" [(ngModel)]="user.gender" required>
+            </div>
+            <div class="optionGender">
+                <label>Otro</label>
+                <input type="radio" name="gender" value="other" [(ngModel)]="user.gender" required>
+            </div>
+        </div>
+        
+        <div class="container boxButton">
+            <!-- 
+                --disabled only to work when every field is required 
+                --[disabled] only disabled the button submit
+            -->
+            <input type="submit" value="Enviar" [disabled]="!formContact.form.valid">
+            
+        </div>
+        
+    </form>
+
+</div>
+<div class="message" *ngIf="status == 'success' ">
+    <p style="color:red; text-align: center;">*Bienvenido, te has registrado correctamente!</p>
+</div>
+
+<!-- 
+
+    https://medium.com/swlh/6-ways-to-dynamically-style-angular-components-b43e037852fa
+ -->

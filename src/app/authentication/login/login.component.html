@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="login-form">
+        <img src="" alt="">
+
+        <!-- if I add a child component in this way, I remove the box provided by default by angular -->
+        <div class="login-form-content" app-login-form></div> <!-- it is important that div tag is closed to able to import other component -->
+
+
+        <!-- when I add a new component, angular provide a container for that component -->
+            <!-- <app-login-form></app-login-form> -->
+
+        <div class="login-form-footer">
+            <div class="login-form-content__links">
+                <a href="#">Acerca de</a>
+                <a href="#">Contáctanos</a>
+                <a href="#">Blog</a>
+            </div>
+            <div>
+                <i class="fab fa-facebook-square login-form footer__socials_social"></i>
+                <i class="fab fa-twitter-square login-form footer__socials_social"></i>
+                <i class="fab fa-instagram-square login-form footer__socials_social"></i>
+            </div>
+        </div>
+    </div>
+</div>

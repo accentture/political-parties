@@ -1,0 +1,9 @@
+<h3>PUEDES ESCOGER LOS CANDIDATOS DE TU PREFERENCIA DE CUALQUIER DEPARTAMENTO</h3>
+<div class="container">
+    <a [routerLink]="['/listCandidates']" 
+       *ngFor="let deparment of peruDepartments" 
+       class="deparmentButton" id="{{deparment.id}}" 
+       #infoDeparmentButton 
+       (click)="goCandidateList($event)">{{deparment.name}}</a>
+    <!-- # using viewChild -->
+</div>

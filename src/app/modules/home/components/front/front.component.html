@@ -1,0 +1,8 @@
+<div class="front-container">
+    <ul class="menu-candidates">
+        <li><a [routerLink]="['/listCandidates']" 
+               (click)="goPresidentialCandidatesList()" 
+               [@enterFromLeft]="'current'">CANDIDATOS A LA PRESIDENCIA</a></li>
+        <li><a [routerLink]="['/peruDepartments']" [@enterFromLeft]="'current'">CANDIDATOS AL CONGRESO</a></li>
+    </ul>
+</div>

@@ -1,0 +1,77 @@
+.box-ranking-candidates{
+    .navigationButtons{
+        width:100%;
+        height: 45px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    
+        div{
+            flex-basis:48%;
+            height: 45px;
+            background-color:#353e58;
+            border-radius: 5px;
+            
+            a{ 
+                display: block;
+                width: 100%;
+                line-height: 45px;
+                text-align: center;
+                text-decoration: none;
+                font-size:20px;
+                font-weight:bold;
+                color:white;
+                cursor:pointer;
+            }
+        }
+        div.itSelfButton{
+            background-color:#0e1823;
+        }
+    }
+    h3{
+        margin-top:5px;
+        text-align: center;
+    }
+    .container{
+        width: 100%;
+        clear: both;
+        justify-content: center;    
+        :host {
+            float: left;
+        }
+    }
+}
+
+
+
+/* responsive */
+@media(max-width:486px){
+    .box-ranking-candidates{
+        .navigationButtons{
+            flex-flow:row wrap;
+            div{
+                flex-grow: 1;
+                flex-basis:95%;
+                margin-right:14px;
+                margin-left:14px;
+                margin-bottom:8px;
+            }
+        }
+        h3{
+            margin-top:60px;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

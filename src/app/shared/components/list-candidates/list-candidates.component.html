@@ -1,0 +1,50 @@
+<!-- searcher -->
+<div class="mask-search">
+    <div class="search">
+        <form action="" class="form-search">
+            <input #searcher type="text" placeholder="Buscar candidato" (input)="searchCandidate(searcher.value)">
+        </form>
+    </div>
+</div>
+
+<div *ngIf=" whatCandidateList == 'presidential'; then PRESIDENTIAL else CONGRESSMAN "></div>
+    
+    <!-- candidates presidential -->
+    <ng-template #PRESIDENTIAL>
+        <h3>CANDIDATOS A LA PRESIDENCIA</h3>
+        <div class="container-list-candidate">
+            <information-candidate 
+                class="information-candidate"
+                *ngFor='let candidate of allCandidates; let i = index; '
+                [informationCandidate]='candidate'
+                [photo]='presidentialPhoto' 
+                [zoneCandidate]="whatCandidateList"
+                [totalCandidates]="totalCandidates"
+                [index]='help'>
+            </information-candidate>
+    
+        </div>
+        
+            
+    
+    </ng-template>
+    
+    <!-- candidates congressman -->
+    <ng-template #CONGRESSMAN>
+        <h3>CANDIDATOS CONGRESALES DEL DEPARTAMENTO DE {{whatCandidateList.toUpperCase()}}</h3>
+
+        <div class="container-list-candidate">
+            <ng-container *ngFor='let candidate of allCandidates'>
+                <information-candidate 
+                    class="information-candidate"
+                    *ngIf='candidate["Distrito Electoral"].toLowerCase() == whatCandidateList' 
+                    [informationCandidate]='candidate'
+                    [photo]='congressmanPhoto' 
+                    [zoneCandidate]="whatCandidateList"
+                    [totalCandidates]="totalCandidates">
+                </information-candidate>
+            </ng-container>
+        </div>
+        
+    </ng-template>
+

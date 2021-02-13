@@ -1,0 +1,27 @@
+
+<div class="box-ranking-candidates">
+    <div class="navigationButtons">
+        <div class="itSelfButton"><a>Ver en lista</a></div>
+        <div><a (click)="navigateToRankingStatistics('rankingStatistics')">Ver en cuadro estadístico</a></div>
+    </div>
+    
+    <ng-container *ngIf="whatRanking == 'presidential'; then PresidentialRanking else CongressmanRanking "></ng-container>
+    
+    <ng-template #PresidentialRanking>
+        <h3>RANKING PRESIDENCIAL</h3> 
+    </ng-template>
+    
+    <ng-template #CongressmanRanking>
+        <h3>RANKING DE CONGRESISTAS POR LA CIUDAD DE {{whatRanking.toUpperCase()}}</h3>
+    </ng-template>
+    
+    <div  class="container">
+        <information-ranking-candidate 
+            *ngFor="let candidate of ranking"
+            [photo]='photo' 
+            [informationCandidate]='candidate'
+        ></information-ranking-candidate>
+    </div>
+</div>
+
+

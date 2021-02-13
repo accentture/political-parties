@@ -1,0 +1,12 @@
+
+<h3>EN ESTAS ZONAS REALIZASTE VOTACIONES</h3>
+<br>
+<div class="front-ranking-container">
+    <ul *ngFor="let zone of zonesWithVotes">
+        <li><a (click)="toRankingList(zone)">{{zone.toUpperCase()}}</a></li>
+    </ul>
+</div>
+
+
+
+

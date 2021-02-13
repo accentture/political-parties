@@ -1,0 +1,124 @@
+.candidate-ranking{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    margin-bottom: 5px;
+    width:100%;
+    height:210px;
+    background-color:#001a3a;
+
+    img{
+
+        width:180px;
+        height:240px;
+        float:left;
+    }
+    .data-candidate{
+        flex-basis:25%;
+        color:white;
+        margin-left:40px;
+
+        .name{
+            text-align: center;
+            margin-top:40px;
+            font-size:30px;
+            font-weight: bold;
+        }
+        .votes{
+            margin-top:15px;
+            text-align: center;
+            font-size:25px;
+        }
+
+    }
+    .votes-in-percentaje{
+        flex-basis: 65%;
+    }
+    
+}
+/* responsive */
+@media(max-width:725px){
+    .candidate-ranking{
+        .data-candidate{
+            .name{
+                font-size:28px;
+            }
+            .votes{
+
+                font-size:22px;
+            }
+        }
+        
+    }
+}
+@media(max-width:635px){
+    .candidate-ranking{
+        .data-candidate{
+            margin-left:20px;
+            .name{
+                font-size:25px;
+            }
+            .votes{
+
+                font-size:20px;
+            }
+        }
+        
+    }
+}
+@media(max-width:547px){
+    .candidate-ranking{
+        .data-candidate{
+            margin-left:10px;
+            .name{
+                font-size:21px;
+            }
+            .votes{
+
+                font-size:20px;
+            }
+        }
+        
+    }
+}
+@media(max-width:435px){
+    .candidate-ranking{
+        .data-candidate{
+            .name{
+                font-size:20px;
+            }
+            .votes{
+
+                font-size:20px;
+            }
+        }
+        
+    }
+}
+@media(max-width:400px){
+    .candidate-ranking{
+        .data-candidate{
+            margin-left:5px;
+            .name{
+                font-size:18px;
+            }
+            .votes{
+
+                font-size:18px;
+            }
+        }
+        .votes-in-percentaje{
+            flex-basis: 60%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

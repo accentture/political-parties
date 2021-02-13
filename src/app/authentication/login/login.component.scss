@@ -1,0 +1,17 @@
+
+
+//appying styels to child component, it allows to take this component to other project
+
+::ng-deep{
+    .signin{
+        background-color: red;
+        color:white;
+        cursor: pointer;
+    }
+    
+    .signin:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+

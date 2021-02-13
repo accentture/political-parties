@@ -1,0 +1,35 @@
+<div class="box-ranking-candidates">
+    <div class="navigationButtons">
+        <div><a (click)="navigateToRankingStatistics('rankingCandidates')">Ver en lista</a></div>
+        <div class="itSelfButton"><a>Ver en cuadro estadístico</a></div>
+    </div>
+    
+    
+    <div class="container-statistic-bar" >    
+    
+        <!-- itering bar for every bar of canddidate -->
+        <div class="bars">
+            <div *ngFor="let candidate of ranking; let i = 'index' " 
+             class="bar" [class]=" 'bar' + (i + 1).toString()" 
+             [style.height.px]=candidate[3]
+             [@growBar]="animate">
+                <p>{{candidate[2]}} %</p>
+            </div>
+        </div>
+    
+        <div class="names-first-candidates">
+            <ng-container *ngFor="let candidate of ranking; let i = 'index' ">
+                <div class="name" [class]=" 'name' + (i + 1).toString() ">{{candidate[0]}}</div>
+            </ng-container>
+        </div>
+    
+    
+        <div class="description-of-table">
+            <p class="totalvotes">{{totalvotes}} votos</p>
+            <p class="descriptionY">VOTOS TOTALES</p>
+            <p class="descriptionX">CANDIDATOS</p>
+        </div>
+    </div>
+</div>
+
+

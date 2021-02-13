@@ -1,0 +1,45 @@
+.overlay{
+    width: 100%;
+    height:100vh;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color:gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .message{
+        width:32%;
+        height:100px;
+        margin:0 auto;
+        margin-top:12%;
+        font-size:30px;
+        color:#230a0a;
+        font-weight: 400;
+    }
+    .button{
+        width:32%;
+        min-height:100px;
+        height: auto;
+        line-height:100px;
+        margin:0 auto;
+        margin-top:35px;
+        color:white;
+        background-color:black;
+        border-radius: 5px;
+        cursor:pointer;
+        font-size:22px;
+        font-weight: bold;
+        a{
+            display:block;
+            font-size:98%;
+        }
+    }
+    .button:hover{
+        background-color:rgb(32, 29, 29);
+    }
+    .button:active{
+        background-color:#183517;
+    }
+}

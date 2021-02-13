@@ -1,0 +1,23 @@
+<!-- information of presidential and congressman candidate -->
+
+<div class="candidate-container">
+    <div class="image">
+        <img [src]="photo" alt="" >
+    </div>
+
+    <div class="information">
+        <h3 class="candidate">CANDIDATO:</h3>
+        <h3>{{informationCandidate['Primer apellido'] | customLowercase}}  {{informationCandidate['Segundo apellido'] | customLowercase}} {{informationCandidate.Prenombres | customLowercase}}</h3>
+        <br>
+        
+        <h3>ORGANIZACION POLITICA: </h3>
+        <p>{{informationCandidate['Organización Política'] | customLowercase}}</p>
+        <br>
+
+        <p><span>VOTOS</span>: {{votes}}</p>
+        
+    </div>
+    <vote-button class="button-vote"  (vote)="sendVote($event)"></vote-button>
+</div>
+
+

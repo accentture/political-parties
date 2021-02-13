@@ -1,0 +1,43 @@
+.votes-in-percentaje{
+    display: flex;
+    justify-content: flex-end;
+    color:#8c948a;
+    font-size:150px;
+    font-weight: bold;
+    line-height: 210px;
+}
+/* responsive */
+@media(max-width:725px){
+    .votes-in-percentaje{
+        font-size:125px;
+
+    }
+}
+@media(max-width:635px){
+    .votes-in-percentaje{
+        font-size:110px;
+
+    }
+}
+@media(max-width:547px){
+    .votes-in-percentaje{
+        font-size:85px;
+
+    }
+}
+@media(max-width:400px){
+    .votes-in-percentaje{
+        font-size:70px;
+
+    }
+}
+@media(max-width:348px){
+    .votes-in-percentaje{
+        font-size:60px;
+
+    }
+}
+
+
+
+

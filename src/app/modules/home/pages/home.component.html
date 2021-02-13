@@ -1,0 +1,36 @@
+<header id="header">
+    <ul class="menu">
+        <li><a [routerLink]="['/front']">CANDIDATOS</a></li>
+        <li><a [routerLink]="['/frontRanking']">RANKING ELECTORAL</a></li>
+        <!-- <li><a [routerLink]="['/contact']">REGISTRARSE</a></li> -->
+    </ul>
+
+    <!-- <ng-container *ngIf="user === undefined; then REGISTER else USER "></ng-container>
+
+        <ng-template #REGISTER>
+            <div class="user">
+                <a [routerLink]="['/contact']">REGISTRARSE</a>
+                
+            </div>
+        </ng-template>
+
+        <ng-template #USER>
+            <div class="user">
+                {{user.name}}                
+            </div>
+        </ng-template> -->
+</header>
+
+<section class="section">
+    <h1>RANKING ELECCIONES 2021</h1>
+
+    <!-- banner contain dynamic components -->
+    <banner [phrases]="adPhrase"></banner>
+
+    <div id="main-container" class="wrap">
+        <router-outlet></router-outlet>
+    </div>
+</section>
+<footer>
+
+</footer>
