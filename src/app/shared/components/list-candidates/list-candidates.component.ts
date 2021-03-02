@@ -32,8 +32,8 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     candidatesService: CandidatesService;
     totalCandidates: number;
 
-    photos: any;
     help: any;
+    photos: any[] = [];
 
     constructor(
         private injector: Injector,
@@ -52,10 +52,10 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     }
 
     ngOnInit(): void {
-        //this.chargePhotosOfCandidates();
         this.getServices();
         this.getCandidateListToNavigate();
         this.chargePhotos();
+        this.chargePhotosOfCandidates();
     }
     ngDoCheck() {}
     ngOnDestroy(): void {
@@ -80,12 +80,12 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     }
     chargePhotos() {
         //for presidential photo
-        this.instagramAPIService.getPhoto('17893974742675499').subscribe((response) => {
+        this.instagramAPIService.obtainPhoto('17893974742675499').subscribe((response) => {
             this.presidentialPhoto = response.media_url;
         });
 
         //for congressam photo
-        this.instagramAPIService.getPhoto('17848035548463192').subscribe((response) => {
+        this.instagramAPIService.obtainPhoto('17848035548463192').subscribe((response) => {
             this.congressmanPhoto = response.media_url;
         });
     }
@@ -103,14 +103,19 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     get allCandidates() {
         return this._allCandidates;
     }
+
     chargePhotosOfCandidates() {
         this.instagramAPIService.getphotos.subscribe((response) => {
-            this.photos = new Promise((resolve, reject) => {
-                resolve(response);
-            });
-            console.log(this.photos);
+            let subscriptionOfPhotos = response;
+
+
+            for (let x = 0; x < subscriptionOfPhotos.length; x++) {
+                subscriptionOfPhotos[x].subscribe((response) => {
+                    this.photos.push(response);
+                });
+            }
+
         });
-        this.photos.then((successMessage) => (this.help = successMessage));
-        console.log(this.help);
+
     }
 }

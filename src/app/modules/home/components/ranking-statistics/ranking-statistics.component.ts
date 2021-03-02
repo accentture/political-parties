@@ -57,4 +57,7 @@ export class RankingStatisticsComponent extends RankingCandidatesComponent imple
         const maxHeight: number = 395;
         return (percentaje * maxHeight) / 100; //compute thought rule of 3 simple
     }
+    goToAddMoreVotes() {
+        this.router.navigate([`/listCandidates/${this.whatRanking}`]);
+    }
 }

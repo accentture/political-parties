@@ -83,6 +83,18 @@ h1{
     text-decoration:none;
 
 }
+section{
+    min-height: 80vh;
+    height: auto;
+}
+footer{
+    width:100%;
+    font-size: 110%;
+
+    div{
+        text-align: center;
+    }
+}
 /* responsive */
 @media(max-width:1050px){
     #header{   

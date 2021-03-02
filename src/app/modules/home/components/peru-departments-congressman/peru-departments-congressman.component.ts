@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Injector, Inject, HostBinding } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Injector, Inject, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DEPARTMENTS, department, PERU_DEPARTMENTS } from '../../../../core/services/peru-departments.service';
