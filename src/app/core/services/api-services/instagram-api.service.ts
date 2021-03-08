@@ -56,7 +56,7 @@ export class InstagramAPIService {
         console.log(this.photoPromiseCollection.length)
         return
     }
-    private obtainIdAllPhotos(){
+    private obtainIdAllPhotos():Observable<any>{
         //return forkJoin({instagram:this.http.get(`${this.urlToGetIdsByPhotos}${this.token}`)})
         return this.http.get(`${this.urlToGetIdsByPhotos}${this.token}`)
     }

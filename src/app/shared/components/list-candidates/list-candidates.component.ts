@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, OnDestroy, Optional, Injector } from '@angular/core';
+import { Component, OnInit, DoCheck, AfterContentInit, OnDestroy, Optional, Injector } from '@angular/core';
 
 //API
 import { InstagramAPIService } from '../../../core/services/api-services/instagram-api.service';
@@ -20,7 +20,7 @@ import { completeCandidate } from '../../../core/models/complete-candidate';
     providers: [candidatesServiceProvider],
 })
 //CandidatesCongressmanService, CandidatesPresidentialService
-export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
+export class ListCandidatesComponent implements OnInit, DoCheck, AfterContentInit, OnDestroy {
     myCustomSubscription: any; //for refresh this component
     private _allCandidates: Array<completeCandidate> = [];
 
@@ -34,6 +34,8 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
 
     help: any;
     photos: any[] = [];
+
+    counter: number = 0;
 
     constructor(
         private injector: Injector,
@@ -52,12 +54,14 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     }
 
     ngOnInit(): void {
+        this.counter = 0;
         this.getServices();
         this.getCandidateListToNavigate();
         this.chargePhotos();
         this.chargePhotosOfCandidates();
     }
     ngDoCheck() {}
+    ngAfterContentInit() {}
     ngOnDestroy(): void {
         //removing custom subscription
         if (this.myCustomSubscription) {
@@ -77,6 +81,7 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
     getCandidatesList() {
         this._allCandidates = this.candidatesService.getCandidates(this.whatCandidateList);
         this.totalCandidates = this._allCandidates.length;
+        console.log(this._allCandidates);
     }
     chargePhotos() {
         //for presidential photo
@@ -108,14 +113,13 @@ export class ListCandidatesComponent implements OnInit, DoCheck, OnDestroy {
         this.instagramAPIService.getphotos.subscribe((response) => {
             let subscriptionOfPhotos = response;
 
-
             for (let x = 0; x < subscriptionOfPhotos.length; x++) {
                 subscriptionOfPhotos[x].subscribe((response) => {
                     this.photos.push(response);
                 });
             }
-
+            console.log(this.photos);
+            console.log(this.photos.length);
         });
-
     }
 }

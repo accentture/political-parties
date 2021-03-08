@@ -11,7 +11,6 @@ import { VotesControllerService } from '../../../core/services/electoral-data/vo
 })
 export class InformationCandidateComponent implements OnInit, OnDestroy, OnChanges {
     @Input('zoneCandidate') zone: string; //it allows to check what parent component is using this component
-    @Input() photo: any; //for general information candidate
     @Input() informationCandidate: completeCandidate | any; //for general information candidate and electoral ranking
     @Input() totalCandidates: number;
     @Input() index: any;
@@ -26,7 +25,6 @@ export class InformationCandidateComponent implements OnInit, OnDestroy, OnChang
         this.buildNamesAndSurnames();
         this.askVotes();
         this.updateStateOfVotes();
-        console.log(this.index);
     }
     ngOnChanges(): void {
         this.updateStateOfVotes();
