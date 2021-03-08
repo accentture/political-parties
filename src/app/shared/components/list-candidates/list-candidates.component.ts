@@ -58,7 +58,6 @@ export class ListCandidatesComponent implements OnInit, DoCheck, AfterContentIni
         this.getServices();
         this.getCandidateListToNavigate();
         this.chargePhotos();
-        this.chargePhotosOfCandidates();
     }
     ngDoCheck() {}
     ngAfterContentInit() {}
@@ -107,19 +106,5 @@ export class ListCandidatesComponent implements OnInit, DoCheck, AfterContentIni
     }
     get allCandidates() {
         return this._allCandidates;
-    }
-
-    chargePhotosOfCandidates() {
-        this.instagramAPIService.getphotos.subscribe((response) => {
-            let subscriptionOfPhotos = response;
-
-            for (let x = 0; x < subscriptionOfPhotos.length; x++) {
-                subscriptionOfPhotos[x].subscribe((response) => {
-                    this.photos.push(response);
-                });
-            }
-            console.log(this.photos);
-            console.log(this.photos.length);
-        });
     }
 }

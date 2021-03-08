@@ -16,7 +16,5 @@ export class VoteButtonComponent implements OnInit {
     emitVote() {
         this.vote.emit(true);
     }
-    /* redirectToPreferenceUserComponent() {
-        this.router.navigate(['./electoralRanking']);
-    } */
+
 }

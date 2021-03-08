@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { completeCandidate } from '../../models/complete-candidate';
 import { CandidatesCongressmanService } from './candidates-congressman.service';
-import { images } from './images';
+import { IMAGES } from './images';
+
 //this service use candidatesServiceProvider
 @Injectable({
     providedIn: 'root',
@@ -15,9 +16,9 @@ export class CandidatesService {
     fullCandidatesWithImages(candidateCollection: any[]) {
         let counter = 0;
         for (let candidate in candidateCollection) {
-            candidateCollection[candidate]['image'] = images[counter];
+            candidateCollection[candidate]['image'] = IMAGES[counter];
             counter++;
-            if (images[counter] == undefined) {
+            if (IMAGES[counter] == undefined) {
                 counter = 0;
             }
         }

@@ -20,14 +20,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { HomeComponent } from './pages/home.component'
 import { PeruDepartmentsComponent } from './components/peru-departments-congressman/peru-departments-congressman.component'
-import { PeruProvincesComponent } from './components/peru-provinces/peru-provinces.component';
-import { PeruDistrictsComponent } from './components/peru-districts/peru-districts.component';
 import { ListCandidatesComponent } from '../../shared/components/list-candidates/list-candidates.component';
 import { FrontComponent } from './components/front/front.component';
 
 //components shared
 import { InformationCandidateComponent } from '../../shared/components/information-candidate/information-candidate.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { RankingCandidatesComponent } from './components/ranking-candidates/ranking-candidates.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CorruptionPhrasesComponent } from './components/corruption-phrases/corruption-phrases.component';
@@ -41,22 +38,18 @@ import { ZonesWithVotesComponent } from './components/zones-with-votes/zones-wit
 import { VotesInPercentajeComponent } from '../../shared/components/votes-in-percentaje/votes-in-percentaje.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { RankingStatisticsComponent } from './components/ranking-statistics/ranking-statistics.component';
-import { CarouselModule } from '../../carousel/carousel.module';
 import { AuthModule } from '../../authentication/auth.module';
 
 
 @NgModule({
     declarations: [
         HomeComponent,
-        PeruProvincesComponent,
-        PeruDistrictsComponent,
         PeruDepartmentsComponent,
         InformationCandidateComponent,
         ListCandidatesComponent,
         FrontComponent,
         //pipe
         CustomLowerCasePipe,
-        ContactComponent,
         RankingCandidatesComponent,
         BannerComponent,
         CorruptionPhrasesComponent,
@@ -77,7 +70,6 @@ import { AuthModule } from '../../authentication/auth.module';
         HttpClientModule,
         BrowserModule,
         BrowserAnimationsModule,
-        CarouselModule,
         AuthModule,
     ],
     providers:[

@@ -1,4 +1,4 @@
-export const images = [
+export const IMAGES = [
     '../../../../../assets/images/1.jpg',
     '../../../../../assets/images/2.jpg',
     '../../../../../assets/images/4.jpg',
