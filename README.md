@@ -1,9 +1,13 @@
 # PoliticalParties
 
-Este es un sitio web donde puedes hacer votaciones presidenciales y congresales por tus candidatos favoritos para de Perú. Esta aplicación consta de tres partes(en la barra de navegación):
-1. La primera parte es para "CANDIDATOS": En esta parte de la página puede realizar múltiples votaciones tanto para candidatos presidenciales y candidatos congresales por cada departamento. Al momento de hacer votación se recomienda hacer votos al menos por cuatro candidatos (o más candidatos), así en la otra parte de la página (RANKING ELECTORAL), podrás ver un top de los 3 primeros puestos, junto con sus estadisticas. Ahora si solo deseas hacer votación por un solo candidato, la web funcionará igualmente.
+This is a website where you can do presidential and congressman votes for your favorites 
+candidates in the country of Peru. This application consists in two parts(on the navbar):
 
-    Puedes regresar a esta parte de la página las veces que quieras para seguir añadiendo votos sobre los que ya realizaste anteriormente y volver de nuevo a "RANKING ELECTORAL" para visualizar los nuevos resultados de la votación.
-2. La segunda parte es para "RANKING ELECTORAL": A esta parte solo puedes acceder solo si ya haz realizado alguna votación. En esta parte se muestra los votos que realizaste(presidencial o congresal), donde muestra el ranking de los candidatos más votados y sus estadísticas.
+1: The first part of the application if for "CANDIDATOS": On this part of the application you can do multiple votes for presidential and congressman candidates for every department. When a vote is done, it is recommendable to do vote for 4 candidates at least (or more candidates), so in the other part of the application (RANKING ELECTORAL), you will be able to see the first three places toguether with  their statistics. Now if you want to do votes for one candidate, the application will work equally.
 
-3. La tercera parte es para el formulario de registro, donde ingresaras tus datos
+You can return this part of the application as many times as you want to continue adding votes over candidates that you did votes and after return again to "RANKING ELECTORAL" to visualize the new results of your votes.
+
+2.The second part of the application belongs to "RANKIN ELECTORAL": It part of the application can be accessed only if you have done some votes. In this part is showed the votes that you realized (presidential or congressman), where is displayed the candidates ranking more voted with its statistics.
+
+
+
