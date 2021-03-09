@@ -116,6 +116,15 @@
 @media(max-width:400px){
     .candidate-ranking{
         height:190px;
+
+    }
+}
+@media(max-width:300px){
+    .candidate-ranking{
+        height:190px;
+        .votes-in-percentaje{
+            flex-basis: 54%;
+        }
     }
 }
 

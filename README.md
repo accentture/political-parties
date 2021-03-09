@@ -7,7 +7,7 @@ candidates in the country of Peru. This application consists in two parts(on the
 
 You can return this part of the application as many times as you want to continue adding votes over candidates that you did votes and after return again to "RANKING ELECTORAL" to visualize the new results of your votes.
 
-2.The second part of the application belongs to "RANKIN ELECTORAL": It part of the application can be accessed only if you have done some votes. In this part is showed the votes that you realized (presidential or congressman), where is displayed the candidates ranking more voted with its statistics.
+2.The second part of the application belongs to "RANKING ELECTORAL": It part of the application can be accessed only if you have done some votes. In this part is showed the votes that you realized (presidential or congressman), where is displayed the candidates ranking more voted with its statistics.
 
 
 
