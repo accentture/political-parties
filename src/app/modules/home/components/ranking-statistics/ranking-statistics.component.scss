@@ -298,3 +298,26 @@
         }
     }
 }
+@media(max-width:300px){
+    .box-ranking-candidates{
+        .addMoreVotesButton{
+            width:62%;
+        }
+
+    }
+    .box-ranking-candidates{
+        .container-statistic-bar{        
+            .description-of-table{
+                .totalvotes{
+                    left: -45.5%;
+                }
+                .descriptionY{
+                    left: -21%;
+                }
+            }
+
+        }
+    }
+}
+
+

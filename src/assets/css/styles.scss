@@ -205,3 +205,13 @@ footer{
     }
 
 }
+@media(max-width:360px){
+    .front-container ul.menu-candidates li.presidentialLink{
+        line-height: 27px;
+    }
+}
+@media(max-width:319px){
+    .front-container ul.menu-candidates li {
+        line-height: 27px;
+    }
+}
