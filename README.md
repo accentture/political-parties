@@ -1,6 +1,6 @@
 # PoliticalParties
 
-This is a website where you can do presidential and congressman votes for your favorites 
+This is an application where you can do presidential and congressman votes for your favorites 
 candidates in the country of Peru. This application consists in two parts(on the navbar):
 
 1: The first part of the application if for "CANDIDATOS": On this part of the application you can do multiple votes for presidential and congressman candidates for every department. When a vote is done, it is recommendable to do vote for 4 candidates at least (or more candidates), so in the other part of the application (RANKING ELECTORAL), you will be able to see the first three places toguether with  their statistics. Now if you want to do votes for one candidate, the application will work equally.
