@@ -53,3 +53,5 @@ export class RankingCandidatesComponent implements OnInit, OnDestroy {
         this.router.navigate([`/${rankingView}/${this.whatRanking}`]);
     }
 }
+
+
