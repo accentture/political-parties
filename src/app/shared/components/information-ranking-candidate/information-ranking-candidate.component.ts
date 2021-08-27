@@ -12,3 +12,4 @@ export class InformationRankingCandidateComponent implements OnInit {
     constructor() {}
     ngOnInit(): void {}
 }
+

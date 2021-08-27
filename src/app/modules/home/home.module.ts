@@ -90,3 +90,5 @@ export class HomeModule { }
 
     to generate models in angular https://www.codegrepper.com/code-examples/typescript/generate+model+in+angular
 */
+
+//npm run nghm -- serve
